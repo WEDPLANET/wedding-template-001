@@ -24,8 +24,8 @@ const EventComponent = () => {
       </div>
       <div className={`${cabin.className} flex flex-col gap-4 mb-12`}>
         <div>
-          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah
-          kami akan menyelenggarakan acara :
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta&apos;ala,
+          insyaAllah kami akan menyelenggarakan acara :
         </div>
         <div className={`${parisienne.className} text-2xl`}>Akad</div>
         <div>

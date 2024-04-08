@@ -4,6 +4,7 @@ import {Button, Snackbar} from "@mui/material"
 import {cabin, parisienne} from "@/utils/constans/FontList"
 import {BankList} from "@/utils/constans/BankData"
 import {Bank} from "@/mock/bank"
+import Image from "next/image"
 
 const Gift = () => {
   const [openSnackbar, setOpenSnackbar] = useState<boolean>(false)
@@ -47,7 +48,7 @@ const Gift = () => {
               className="border rounded-lg w-[250px] h-content p-4 items-center flex flex-col gap-2 bg-[#36413e]"
               key={i}
             >
-              <img
+              <Image
                 src={findBankLogo(val.bankName)}
                 alt="Next.js Logo"
                 width={100}

@@ -1,5 +1,6 @@
 import {cabin, parisienne} from "@/utils/constans/FontList"
 import {Bride} from "@/mock/bride"
+import Image from "next/image"
 
 const BrideComponent = () => {
   return (
@@ -11,7 +12,7 @@ const BrideComponent = () => {
         Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i untuk
         menghadiri acara pernikahan kami:
       </div>
-      <img
+      <Image
         src="/image/Sample-PNG-Image-square.png"
         alt="Next.js Logo"
         width={80}
@@ -26,7 +27,7 @@ const BrideComponent = () => {
         Bapak {Bride.woman.fatherName} & Ibu {Bride.woman.motherName}
       </div>
       <div className="my-2 text-2xl">&</div>
-      <img
+      <Image
         src="/image/Sample-PNG-Image-square.png"
         alt="Next.js Logo"
         width={80}
