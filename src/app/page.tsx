@@ -12,29 +12,29 @@ import {ParticleBasicOptions} from "@/utils/constans/ParticleOptions"
 import HomePage from "./(Homepage)"
 
 export default function Home() {
-  const audioUrl =
-    "https://pinangan.id/wp-content/uploads/2021/10/Pink-Sweat-At-My-Worst-feat-Kehlani-Official-Video.mp3"
+  // const audioUrl =
+  //   "https://pinangan.id/wp-content/uploads/2021/10/Pink-Sweat-At-My-Worst-feat-Kehlani-Official-Video.mp3"
   const [initParticle, setInitParticle] = useState<boolean>(false)
   const [play, setPlay] = useState<boolean>(false)
-  const [audio] = useState(new Audio(audioUrl))
+  // const [audio] = useState(new Audio(audioUrl))
 
   // useEffect(() => {
   //   window.scrollTo(0, 0)
   // }, [])
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    setPlay(false)
-    audio.pause()
-    setTimeout(() => {
-      audio.play()
-      setPlay(true)
-    }, 3000)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  //   setPlay(false)
+  //   audio.pause()
+  //   setTimeout(() => {
+  //     audio.play()
+  //     setPlay(true)
+  //   }, 3000)
+  // }, [])
 
-  useEffect(() => {
-    play ? audio.play() : audio.pause()
-  }, [play])
+  // useEffect(() => {
+  //   play ? audio.play() : audio.pause()
+  // }, [play])
 
   // useEffect(() => {
   //   audio.addEventListener("ended", () => setPlay(false))
