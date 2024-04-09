@@ -3,5 +3,5 @@ export const BankList = [
   {id: 1, name: "BNI", image: "/image/bank-logo/bni.svg"},
   {id: 2, name: "BRI", image: "/image/bank-logo/bri.svg"},
   {id: 3, name: "BSI", image: "/image/bank-logo/bsi.svg"},
-  {id: 4, name: "Mandiri", image: "/image/bank-logo/mandiri.svg"}
+  {id: 4, name: "MANDIRI", image: "/image/bank-logo/mandiri.svg"}
 ]

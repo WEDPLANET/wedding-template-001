@@ -2,15 +2,15 @@ export const Bride = {
   man: {
     fullName: "Hamzah",
     nickName: "Hamzah",
-    fatherName: "Father Name",
-    motherName: "MotherName",
+    fatherName: "Herdiansyah",
+    motherName: "Ida hamidah",
     photo: ""
   },
   woman: {
-    fullName: "Istri",
-    nickName: "Istri",
-    fatherName: "Father Name",
-    motherName: "MotherName",
+    fullName: "Putri Tisniasari",
+    nickName: "Putri",
+    fatherName: "Sutisna (Alm)",
+    motherName: "Mia Sumiarsyah",
     photo: ""
   }
 }

@@ -1,8 +1,7 @@
 export const Event = {
-  date: "12/10/2024",
-  place:
-    "RT 10 RW 02, Desa Pajerukan, Kec. Kalibagor, Kab. Banyumas, Jawa Tengah 53191",
-  mapsLink: "https://maps.app.goo.gl/yUBusSpk3BZJjPqy5",
-  akad: {start: "10.00 WIB", end: "Selesai"},
+  date: "05/04/2024" /* MM/DD/YYYY */,
+  place: "jl. Subang pamanukan no.64b , sukamulya, kab.subang jawabarat 41252",
+  mapsLink: "https://maps.app.goo.gl/a2C3RBToTB5g8XFi9?g_st=ic ",
+  akad: {start: "08.00 WIB", end: "10.00 WIB"},
   resepsi: {start: "11.00 WIB", end: "Selesai"}
 }

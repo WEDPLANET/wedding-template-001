@@ -1,4 +1,4 @@
 export const Bank = [
-  {bankName: "BCA", no: "123123123", name: "Hamzah"},
-  {bankName: "BSI", no: "888177272", name: "Hamzah Istrinya"}
+  {bankName: "MANDIRI", no: "1730001304956", name: "Hamzah"},
+  {bankName: "BCA", no: "0551432890", name: "Putri Tisniasari"}
 ]

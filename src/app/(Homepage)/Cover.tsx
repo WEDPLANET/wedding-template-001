@@ -1,4 +1,5 @@
 import Image from "next/image"
+import {motion, Variants} from "framer-motion"
 
 import {parisienne} from "@/utils/constans/FontList"
 import {Bride} from "@/mock/bride"
@@ -14,13 +15,15 @@ const Cover = () => {
       <div className={`${parisienne.className} text-[30px]`}>
         Undangan Pernikahan
       </div>
-      <Image
-        src="/image/bg-001.jpeg"
-        alt="Next.js Logo"
-        width={280}
-        height={37}
-        className="my-8 rounded-full border-4 border-[#BEB2C8]"
-      />
+      <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
+        <Image
+          src="/image/sundanese_traditional_wedding.png"
+          alt="Next.js Logo"
+          width={280}
+          height={37}
+          className="my-8 rounded-full border-4 border-[#7C606B]"
+        />
+      </motion.div>
       <div className={`${parisienne.className} text-4xl`}>
         {Bride.woman.nickName}
       </div>

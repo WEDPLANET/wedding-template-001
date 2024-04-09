@@ -45,7 +45,7 @@ const Gift = () => {
         {Bank.map((val, i) => {
           return (
             <div
-              className="border rounded-lg w-[250px] h-content p-4 items-center flex flex-col gap-2 bg-[#36413e]"
+              className="border rounded-lg w-[250px] h-content p-4 items-center flex flex-col gap-2 bg-[#7C606B] text-[#EED5C2]"
               key={i}
             >
               <Image
@@ -59,7 +59,7 @@ const Gift = () => {
               <div className={cabin.className}>a.n {val.name}</div>
               <Button
                 variant="contained"
-                className="!capitalize text-[#36413e]"
+                className="!capitalize !text-[#7C606B]"
                 size="small"
                 color="inherit"
                 onClick={() => copyToClipboard(val.no)}

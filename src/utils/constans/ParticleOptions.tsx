@@ -661,7 +661,7 @@ export const ParticleBasicOptions: ISourceOptions = {
       }
     },
     color: {
-      value: "#ffffff",
+      value: "#EDA4BD",
       animation: {
         h: {
           count: 0,
@@ -923,7 +923,7 @@ export const ParticleBasicOptions: ISourceOptions = {
     links: {
       blink: false,
       color: {
-        value: "#ffffff"
+        value: "#EDA4BD"
       },
       consent: false,
       distance: 150,
