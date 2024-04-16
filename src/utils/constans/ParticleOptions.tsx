@@ -661,7 +661,7 @@ export const ParticleBasicOptions: ISourceOptions = {
       }
     },
     color: {
-      value: "#EDA4BD",
+      value: "#8ACDD7",
       animation: {
         h: {
           count: 0,

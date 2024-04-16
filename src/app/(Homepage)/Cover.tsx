@@ -12,14 +12,14 @@ const Cover = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <div className={`${parisienne.className} text-[30px]`}>
+      <div className={`${parisienne.className} text-[30px] lg:text-[40px] xs:text-[35px]`}>
         Undangan Pernikahan
       </div>
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
         <Image
           src="/image/sundanese_traditional_wedding.png"
           alt="Next.js Logo"
-          width={280}
+          width={240}
           height={37}
           className="my-8 rounded-full border-4 border-[#7C606B]"
         />

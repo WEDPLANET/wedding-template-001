@@ -4,7 +4,15 @@
 
 body {
   color: #6b717e;
-  background: #ffe8e1;
+  /* background: #ffe8e1; */
+  background-image: url("/image/bg-pink-blue.jpg");
+  
+  @media (max-width: 600px) {
+    background-image: url("/image/bg-pink-blue.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* … */
+  }
 }
 
 @layer utilities {

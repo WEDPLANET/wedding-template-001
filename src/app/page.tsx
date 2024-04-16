@@ -20,7 +20,13 @@ export default function Home() {
   // const [audio] = useState(new Audio(audioUrl))
 
   useEffect(() => {
+    const audio = document?.getElementById(`audio-background`)
     window.scrollTo(0, 0)
+
+    if (audio) {
+      // @ts-ignore: Unreachable code error
+      audio.play()
+    }
   }, [])
 
   // useEffect(() => {
