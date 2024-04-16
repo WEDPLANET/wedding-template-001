@@ -1,28 +1,31 @@
 import {Button} from "@mui/material"
 import {parisienne, cabin} from "@/utils/constans/FontList"
 import {Event} from "@/mock/event"
-// import countdown  from "countdown"
-// import Countdown from "react-countdown"
-
-// const countdown = require("countdown")
 
 const EventComponent = () => {
   const eventDate = new Date(Event.date)
   const formatter = new Intl.DateTimeFormat("id-ID", {dateStyle: "full"})
   const formattedDate = formatter.format(eventDate)
 
-  // console.log("countdown", countdown(new Date("05/04/2024")))
+  const calculateTimeLeft = () => {
+    // @ts-ignore: Unreachable code error
+    const difference = new Date(Event.date) - new Date()
+    const months = Math.floor(difference / (1000 * 60 * 60 * 24 * 30)) // Convert milliseconds to months
+    const days = Math.floor(
+      (difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+    )
+    const years = Math.floor(months / 12)
+
+    return {years, months, days}
+  }
 
   return (
     <div className="flex flex-col items-center text-center gap-4 p-8">
       <div className={`${parisienne.className} text-2xl`}>
         Waktu Menuju Acara
       </div>
-      {/* <Countdown date={new Date(Event.date)}>
-        <div>ulala</div>
-      </Countdown> */}
       <div className={`${cabin.className} flex gap-2 mb-4text-sm`}>
-        <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
+        {/* <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
           9 D
         </div>
         <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
@@ -30,9 +33,9 @@ const EventComponent = () => {
         </div>
         <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
           9 M
-        </div>
-        <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
-          9 S
+        </div> */}
+        <div className="border border-4 rounded-lg text-center justify-center flex flex-col p-4 py-2">
+          {calculateTimeLeft().days} Hari Lagi
         </div>
       </div>
       <div className={`${cabin.className} flex flex-col gap-4 mb-4`}>

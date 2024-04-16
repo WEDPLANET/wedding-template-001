@@ -1,6 +1,6 @@
 "use client"
 import {useState, useEffect, useMemo} from "react"
-import { useSearchParams } from "next/navigation"
+import {useSearchParams} from "next/navigation"
 import {Fab} from "@mui/material"
 import Particles, {initParticlesEngine} from "@tsparticles/react"
 import {loadFull} from "tsparticles"
@@ -9,58 +9,22 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow"
 import PauseIcon from "@mui/icons-material/Pause"
 
 import {ParticleBasicOptions} from "@/utils/constans/ParticleOptions"
+import {Event} from "@/mock/event"
 
 import HomePage from "./(Homepage)"
 import DialogCover from "@/components/DialogCover"
 
 export default function Home() {
-  const audioUrl = "/bg-music.mp3"
   const searchParams = useSearchParams()
- 
-  const to = searchParams.get('to')
-  // const audioUrl =
-  //   "https://pinangan.id/wp-content/uploads/2021/10/Pink-Sweat-At-My-Worst-feat-Kehlani-Official-Video.mp3"
+
+  const to = searchParams.get("to")
   const [initParticle, setInitParticle] = useState<boolean>(false)
   const [play, setPlay] = useState<boolean>(false)
   const [openModal, setOpenModal] = useState<boolean>(true)
 
-  // const [audio] = useState(new Audio(audioUrl))
-
   useEffect(() => {
-    // const audio = document?.getElementById(`audio-background`)
     window.scrollTo(0, 0)
-
-    // if (audio) {
-    //   // @ts-ignore: Unreachable code error
-    //   audio.play()
-    // }
   }, [])
-
-  // useEffect(() => {
-  //   // window.scrollTo(0, 0)
-  //   setPlay(false)
-  //   // audio.pause()
-  //   setTimeout(() => {
-  //     audio.play()
-  //     setPlay(true)
-  //   }, 3000)
-  // }, [])
-
-  // useEffect(() => {
-  //   play ? audio.play() : audio.pause()
-  // }, [play])
-
-  // useEffect(() => {
-  //   audio.addEventListener("ended", () => setPlay(false))
-  //   return () => {
-  //     audio.removeEventListener("ended", () => setPlay(false))
-  //   }
-  // }, [])
-
-  // const initAudio = () => {
-  //   const targetAudio = document.getElementById("audioBtn")
-  //   if (targetAudio) targetAudio.pla
-  // }
 
   const onPlayPause = () => {
     const audio = document?.getElementById(`audio-background`)
@@ -98,14 +62,16 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <audio id="audio-background" src="/bg-music-0.mp3" loop>
-        {/* <source src="/bg-music-0.mp3" type="audio/mpeg"></source> */}
-      </audio>
+      <audio id="audio-background" src="/bg-music-0.mp3" loop></audio>
       {initParticle && (
         <Particles id="tsparticles" options={options} className="-z-10" />
       )}
       <HomePage />
-      <DialogCover open={openModal} onClose={() => onCloseModal()} to={to || ""} />
+      <DialogCover
+        open={openModal}
+        onClose={() => onCloseModal()}
+        to={to || ""}
+      />
       <Fab
         color="inherit"
         aria-label="add"
