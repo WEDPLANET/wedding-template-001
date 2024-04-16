@@ -12,20 +12,21 @@ import {ParticleBasicOptions} from "@/utils/constans/ParticleOptions"
 import HomePage from "./(Homepage)"
 
 export default function Home() {
+  const audioUrl = "/bg-music.mp3"
   // const audioUrl =
   //   "https://pinangan.id/wp-content/uploads/2021/10/Pink-Sweat-At-My-Worst-feat-Kehlani-Official-Video.mp3"
   const [initParticle, setInitParticle] = useState<boolean>(false)
   const [play, setPlay] = useState<boolean>(false)
   // const [audio] = useState(new Audio(audioUrl))
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   // useEffect(() => {
-  //   window.scrollTo(0, 0)
+  //   // window.scrollTo(0, 0)
   //   setPlay(false)
-  //   audio.pause()
+  //   // audio.pause()
   //   setTimeout(() => {
   //     audio.play()
   //     setPlay(true)
@@ -49,6 +50,17 @@ export default function Home() {
   // }
 
   const onPlayPause = () => {
+    const audio = document?.getElementById(`audio-background`)
+
+    if (audio) {
+      if (play) {
+        // @ts-ignore: Unreachable code error
+        audio.pause()
+      } else {
+        // @ts-ignore: Unreachable code error
+        audio.play()
+      }
+    }
     setPlay(!play)
   }
 
@@ -64,9 +76,16 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      {/* <audio autoPlay>
-        <source src="https://pinangan.id/wp-content/uploads/2021/10/Pink-Sweat-At-My-Worst-feat-Kehlani-Official-Video.mp3"></source>
-      </audio> */}
+      <audio
+        autoPlay
+        id="audio-background"
+        onPlay={() => setPlay(true)}
+        onPause={() => setPlay(false)}
+        src="/bg-music-0.mp3"
+        loop
+      >
+        {/* <source src="/bg-music-0.mp3" type="audio/mpeg"></source> */}
+      </audio>
       {initParticle && (
         <Particles id="tsparticles" options={options} className="-z-10" />
       )}
