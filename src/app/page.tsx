@@ -1,6 +1,5 @@
 "use client"
 import {useState, useEffect, useMemo} from "react"
-import {useSearchParams} from "next/navigation"
 import {Fab} from "@mui/material"
 import Particles, {initParticlesEngine} from "@tsparticles/react"
 import {loadFull} from "tsparticles"
@@ -9,15 +8,11 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow"
 import PauseIcon from "@mui/icons-material/Pause"
 
 import {ParticleBasicOptions} from "@/utils/constans/ParticleOptions"
-import {Event} from "@/mock/event"
 
 import HomePage from "./(Homepage)"
 import DialogCover from "@/components/DialogCover"
 
 export default function Home() {
-  const searchParams = useSearchParams()
-
-  const to = searchParams.get("to")
   const [initParticle, setInitParticle] = useState<boolean>(false)
   const [play, setPlay] = useState<boolean>(false)
   const [openModal, setOpenModal] = useState<boolean>(true)
@@ -70,7 +65,6 @@ export default function Home() {
       <DialogCover
         open={openModal}
         onClose={() => onCloseModal()}
-        to={to || ""}
       />
       <Fab
         color="inherit"
