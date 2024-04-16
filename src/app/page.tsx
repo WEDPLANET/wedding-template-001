@@ -1,5 +1,6 @@
 "use client"
 import {useState, useEffect, useMemo} from "react"
+import { useSearchParams } from "next/navigation"
 import {Fab} from "@mui/material"
 import Particles, {initParticlesEngine} from "@tsparticles/react"
 import {loadFull} from "tsparticles"
@@ -10,23 +11,29 @@ import PauseIcon from "@mui/icons-material/Pause"
 import {ParticleBasicOptions} from "@/utils/constans/ParticleOptions"
 
 import HomePage from "./(Homepage)"
+import DialogCover from "@/components/DialogCover"
 
 export default function Home() {
   const audioUrl = "/bg-music.mp3"
+  const searchParams = useSearchParams()
+ 
+  const to = searchParams.get('to')
   // const audioUrl =
   //   "https://pinangan.id/wp-content/uploads/2021/10/Pink-Sweat-At-My-Worst-feat-Kehlani-Official-Video.mp3"
   const [initParticle, setInitParticle] = useState<boolean>(false)
   const [play, setPlay] = useState<boolean>(false)
+  const [openModal, setOpenModal] = useState<boolean>(true)
+
   // const [audio] = useState(new Audio(audioUrl))
 
   useEffect(() => {
-    const audio = document?.getElementById(`audio-background`)
+    // const audio = document?.getElementById(`audio-background`)
     window.scrollTo(0, 0)
 
-    if (audio) {
-      // @ts-ignore: Unreachable code error
-      audio.play()
-    }
+    // if (audio) {
+    //   // @ts-ignore: Unreachable code error
+    //   audio.play()
+    // }
   }, [])
 
   // useEffect(() => {
@@ -80,22 +87,25 @@ export default function Home() {
 
   const options: ISourceOptions = useMemo(() => ({...ParticleBasicOptions}), [])
 
+  const onCloseModal = () => {
+    const audio = document?.getElementById(`audio-background`)
+    // @ts-ignore: Unreachable code error
+    audio.play()
+
+    setPlay(true)
+    setOpenModal(false)
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <audio
-        autoPlay
-        id="audio-background"
-        onPlay={() => setPlay(true)}
-        onPause={() => setPlay(false)}
-        src="/bg-music-0.mp3"
-        loop
-      >
+      <audio id="audio-background" src="/bg-music-0.mp3" loop>
         {/* <source src="/bg-music-0.mp3" type="audio/mpeg"></source> */}
       </audio>
       {initParticle && (
         <Particles id="tsparticles" options={options} className="-z-10" />
       )}
       <HomePage />
+      <DialogCover open={openModal} onClose={() => onCloseModal()} to={to || ""} />
       <Fab
         color="inherit"
         aria-label="add"
