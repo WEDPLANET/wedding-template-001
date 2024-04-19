@@ -11,6 +11,7 @@ body {
     background-image: url("/image/bg-pink-blue.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     /* … */
   }
 }

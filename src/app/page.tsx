@@ -17,9 +17,9 @@ export default function Home() {
   const [play, setPlay] = useState<boolean>(false)
   const [openModal, setOpenModal] = useState<boolean>(true)
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
 
   const onPlayPause = () => {
     const audio = document?.getElementById(`audio-background`)
@@ -47,7 +47,10 @@ export default function Home() {
   const options: ISourceOptions = useMemo(() => ({...ParticleBasicOptions}), [])
 
   const onCloseModal = () => {
+    window.scrollTo(0, 0)
     const audio = document?.getElementById(`audio-background`)
+    // @ts-ignore: Unreachable code error
+    audio.currentTime = 108
     // @ts-ignore: Unreachable code error
     audio.play()
 
