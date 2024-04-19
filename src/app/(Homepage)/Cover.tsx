@@ -1,5 +1,5 @@
 import Image from "next/image"
-import {motion, Variants} from "framer-motion"
+import {motion} from "framer-motion"
 
 import {parisienne} from "@/utils/constans/FontList"
 import {Bride} from "@/mock/bride"

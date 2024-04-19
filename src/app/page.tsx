@@ -17,10 +17,6 @@ export default function Home() {
   const [play, setPlay] = useState<boolean>(false)
   const [openModal, setOpenModal] = useState<boolean>(true)
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
-
   const onPlayPause = () => {
     const audio = document?.getElementById(`audio-background`)
 
