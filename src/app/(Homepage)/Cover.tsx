@@ -12,7 +12,9 @@ const Cover = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <div className={`${parisienne.className} text-[30px] lg:text-[40px] xs:text-[35px]`}>
+      <div
+        className={`${parisienne.className} text-[30px] lg:text-[40px] xs:text-[35px] font-medium`}
+      >
         Undangan Pernikahan
       </div>
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
@@ -22,6 +24,10 @@ const Cover = () => {
           width={240}
           height={37}
           className="my-8 rounded-full border-4 border-[#7C606B]"
+          // box-shadow: /;
+          style={{
+            boxShadow: "rgb(38, 57, 77) 0px 15px 30px -10px",
+          }}
         />
       </motion.div>
       <div className={`${parisienne.className} text-4xl`}>

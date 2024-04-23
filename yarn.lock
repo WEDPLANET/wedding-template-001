@@ -932,6 +932,20 @@ acorn@^8.9.0:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.11.3.tgz"
   integrity sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==
 
+add-to-calendar-button-react@^2.6.13:
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/add-to-calendar-button-react/-/add-to-calendar-button-react-2.6.13.tgz#4a0254983f90b74ad7f23fc613beb994f3519cf7"
+  integrity sha512-GQZNxHTkUBZ+I8Y9ojIjFpRRtfVxy5zKdru9PZM0hVJIq2nWuvjU7XgAMXhYQ41adTIXiZa/A5LUC4Xm4+CH7g==
+  dependencies:
+    add-to-calendar-button "^2.6.13"
+
+add-to-calendar-button@^2.6.13:
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/add-to-calendar-button/-/add-to-calendar-button-2.6.13.tgz#e52c22ee5dc6262d842c5f124e809df3f6eee78b"
+  integrity sha512-Me2n/8uV8AWq3guJI0tbBpVgeXTsMVXAXmxfZeCFPh6PHItr1pQjKlPRKZmf84BSdDJHvVLXG7kGKE/X78D2pA==
+  dependencies:
+    timezones-ical-library "^1.8.2"
+
 ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz"
@@ -3111,6 +3125,7 @@ streamsearch@^1.1.0:
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -3293,6 +3308,11 @@ thenify-all@^1.0.0:
   integrity sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==
   dependencies:
     any-promise "^1.0.0"
+
+timezones-ical-library@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/timezones-ical-library/-/timezones-ical-library-1.8.2.tgz#33a96db1f2bcce87d5e00ee64f263b9925c37719"
+  integrity sha512-0bbCp+xXtTUOcBo7bAGkzK5yMiNnY/FmJblTlnkGcqW5O+SChvWNtvsOX9WqbU5/8sT+Nl/MKQ7c9qafIkUstA==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

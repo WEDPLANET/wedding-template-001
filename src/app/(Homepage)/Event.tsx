@@ -1,6 +1,9 @@
-import {Button} from "@mui/material"
 import {parisienne, cabin} from "@/utils/constans/FontList"
 import {Event} from "@/mock/event"
+import Image from "next/image"
+import {AddToCalendarButton} from "add-to-calendar-button-react"
+import {Bride} from "@/mock/bride"
+import {useMemo} from "react"
 
 const EventComponent = () => {
   const eventDate = new Date(Event.date)
@@ -19,22 +22,30 @@ const EventComponent = () => {
     return {years, months, days}
   }
 
+  const renderedDate = useMemo(() => {
+    const eventDate = new Date(Event.date)
+    const fullYear = eventDate.getFullYear()
+    const month = String(eventDate.getMonth() + 1).padStart(2, "0")
+    const day = String(eventDate.getDate()).padStart(2, "0")
+
+    return {year: String(fullYear), month, day}
+  }, [Event.date])
+
   return (
     <div className="flex flex-col items-center text-center gap-4 p-8">
-      <div className={`${parisienne.className} text-2xl`}>
+      <div className={`${parisienne.className} text-3xl font-semibold`}>
         Waktu Menuju Acara
       </div>
+      <Image
+        src="/image/flower_004.png"
+        alt="Next.js Logo"
+        width={240}
+        height={37}
+        className="absolute z-[-1] opacity-75 left-0"
+      />
       <div className={`${cabin.className} flex gap-2 mb-4text-sm`}>
-        {/* <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
-          9 D
-        </div>
-        <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
-          9 H
-        </div>
-        <div className="border rounded-lg w-16 h-12 text-center justify-center flex flex-col">
-          9 M
-        </div> */}
-        <div className="border border-4 rounded-lg text-center justify-center flex flex-col p-4 py-2">
+        <div className="border border-[#7C606B] border-4 rounded-lg text-center justify-center flex flex-col p-4 py-2">
+          <span className="absolute border h-12 w-20 rounded-lg bg-[#7C606B] opacity-25 animate-ping"></span>
           {calculateTimeLeft().days} Hari Lagi
         </div>
       </div>
@@ -52,19 +63,21 @@ const EventComponent = () => {
           {Event.resepsi.start} - {Event.resepsi.end}
         </div>
         <div className="mt-8">{formattedDate}</div>
+        <div className="flex justify-center">
+          <AddToCalendarButton
+            name={`Wedding ${Bride.woman.nickName} & ${Bride.man.nickName}`}
+            startDate={`${renderedDate.year}-${renderedDate.month}-${renderedDate.day}`}
+            startTime={Event.akad.start}
+            endTime={Event.resepsi.end}
+            timeZone="Asia/Jakarta"
+            location={Event.placeName}
+            options="'Google'"
+            size="2"
+            buttonsList
+            label="Add to Calendar"
+          ></AddToCalendarButton>
+        </div>
       </div>
-      <Button
-        component="a"
-        variant="contained"
-        size="small"
-        className="capitalize text-[#36413e]"
-        color="inherit"
-        href={Event.mapsLink}
-        target="_blank"
-      >
-        Lihat di Google Maps
-      </Button>
-      <div className={cabin.className}>{Event.place}</div>
     </div>
   )
 }

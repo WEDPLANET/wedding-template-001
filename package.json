@@ -15,6 +15,7 @@
     "@mui/material": "^5.15.15",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
+    "add-to-calendar-button-react": "^2.6.13",
     "countdown": "^2.6.0",
     "framer-motion": "^11.0.25",
     "next": "14.1.4",

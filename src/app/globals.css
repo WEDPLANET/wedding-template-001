@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 body {
-  color: #6b717e;
+  color: #575a62;
   /* background: #ffe8e1; */
   background-image: url("/image/bg-pink-blue.jpg");
-  
+
   @media (max-width: 600px) {
     background-image: url("/image/bg-pink-blue.jpg");
     background-position: center;

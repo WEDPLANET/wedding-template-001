@@ -21,7 +21,7 @@ const DialogCover = (props: PropsType) => {
       // sx={{backgroundImage: "url('/image/bg-pink-blue.jpg')"}}
     >
       <div className="flex flex-col justify-center items-center text-center h-screen p-8 bg-[url('/image/bg-pink-blue.jpg')]">
-        <div className={`${parisienne.className} text-3xl`}>
+        <div className={`${parisienne.className} text-4xl font-medium`}>
           Undangan Pernikahan
         </div>
         <Image
