@@ -24,7 +24,6 @@ const Cover = () => {
           width={240}
           height={37}
           className="my-8 rounded-full border-4 border-[#7C606B]"
-          // box-shadow: /;
           style={{
             boxShadow: "rgb(38, 57, 77) 0px 15px 30px -10px",
           }}

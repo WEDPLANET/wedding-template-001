@@ -6,7 +6,7 @@ import Quotes from "./Quotes"
 import Bride from "./Bride"
 import Event from "./Event"
 import Location from "./Location"
-import Gift from "./LoveGift"
+// import Gift from "./LoveGift"
 import Footer from "./Footer"
 
 const pages = [
@@ -15,7 +15,7 @@ const pages = [
   {id: 2, color: "#9120fa", component: <Bride />},
   {id: 3, color: "#ffa90a", component: <Event />},
   {id: 4, color: "#ffa90a", component: <Location />},
-  {id: 5, color: "#68a832", component: <Gift />},
+  // {id: 5, color: "#68a832", component: <Gift />},
   {id: 6, color: "#9120fa", component: <Footer />},
 ]
 

@@ -6,14 +6,9 @@ body {
   color: #575a62;
   /* background: #ffe8e1; */
   background-image: url("/image/bg-pink-blue.jpg");
-
-  @media (max-width: 600px) {
-    background-image: url("/image/bg-pink-blue.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* … */
-  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @layer utilities {
